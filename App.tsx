@@ -1,5 +1,14 @@
 //import core component react-native
-import {Text, View, StyleSheet, Image, ScrollView} from 'react-native'; // react-native itu labrary
+import {
+  Text,
+  View,
+  StyleSheet,
+  Image,
+  ScrollView,
+  TextInput,
+  Touchable,
+  TouchableOpacity,
+} from 'react-native'; // react-native itu labrary
 
 //membuat fungsi
 const App = () => {
@@ -13,6 +22,10 @@ const App = () => {
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View>
+          <TextInput style={styles.input} placeholder="Masukan nama anda" />
+          <TouchableOpacity style={styles.button} activeOpacity={(0, 5)}>
+            <Text style={styles.subTitle}>Submit</Text>
+          </TouchableOpacity>
           <Text style={styles.subTitle}>From Directory</Text>
           <Image style={styles.img1} source={require('./Assets/singa.jpg')} />
           <Text style={styles.subTitle}>From public</Text>
@@ -64,5 +77,20 @@ const styles = StyleSheet.create({
     width: 300,
     height: 300,
     margin: 20,
+  },
+  input: {
+    pedding: 20,
+    margin: 20,
+    borderRadius: 15,
+  },
+  button: {
+    backgroundColor: 'blue',
+    pedding: 20,
+    margin: 20,
+    borderRadius: 15,
+  },
+  subTitle: {
+    fontSize: 20,
+    borderRadius: 15,
   },
 });
