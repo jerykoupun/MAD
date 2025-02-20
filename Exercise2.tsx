@@ -204,6 +204,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 9,
   },
   buttonitem: {
     fontWeight: 'bold',
