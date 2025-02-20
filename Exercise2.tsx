@@ -6,11 +6,17 @@ import {
   ImageBackground,
   Image,
   ScrollView,
+  StatusBar,
+  TextInput,
+  TouchableOpacity,
 } from 'react-native';
 
 const Exercise2 = () => {
   return (
     <>
+      <View>
+        <StatusBar backgroundColor={'#fafafa'} barStyle={'dark-content'} />
+      </View>
       <View>
         <ImageBackground
           source={require('./Assets/Background2.jpg')}
@@ -103,6 +109,38 @@ const Exercise2 = () => {
             Klabat Set Up is one of the E-Business projects that I created.
           </Text>
         </View>
+        <View>
+          <TextInput
+            style={{
+              elevation: 3,
+              marginHorizontal: 20,
+              marginTop: 20,
+              borderRadius: 5,
+              paddingLeft: 10,
+              borderWidth: 2,
+              borderColor: '#76d1ff',
+            }}
+            placeholder="Bagaimana tanggapan anda?"
+          />
+        </View>
+        <View>
+          <TextInput
+            style={{
+              elevation: 3,
+              marginHorizontal: 20,
+              marginTop: 20,
+              borderRadius: 5,
+              paddingLeft: 10,
+              borderWidth: 2,
+              borderColor: '#76d1ff',
+            }}
+            placeholder="Apa yang perlu saya kembangkan?"
+          />
+
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonitem}>Submit</Text>
+          </TouchableOpacity>
+        </View>
       </ScrollView>
     </>
   );
@@ -158,5 +196,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'white',
     textAlign: 'justify',
+  },
+  button: {
+    backgroundColor: '#76d1ff',
+    marginVertical: 10,
+    paddingVertical: 12,
+    marginHorizontal: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonitem: {
+    fontWeight: 'bold',
+    fontSize: 18,
   },
 });
