@@ -6,7 +6,6 @@ import {
   Image,
   ScrollView,
   TextInput,
-  Touchable,
   TouchableOpacity,
 } from 'react-native'; // react-native itu labrary
 
@@ -17,7 +16,7 @@ const App = () => {
     <>
       <View style={styles.container}>
         <Text style={styles.title}>
-          Hello World, My Name is Jery Koupun, I'm Student of UK
+          Hello World, My Name is Jery Marten Koupun, I'm Student of UK
         </Text>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
