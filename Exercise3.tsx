@@ -4,9 +4,11 @@ import {
   View,
   StyleSheet,
   ScrollView,
-  TextInput,
   TouchableOpacity,
 } from 'react-native';
+import Input from './Components/Input';
+import Title from './Components/Title';
+import Button from './Components/Button';
 
 const App = () => {
   return (
@@ -15,30 +17,12 @@ const App = () => {
         showsVerticalScrollIndicator={false}
         style={styles.scrollContainer}>
         <View style={styles.container}>
-          <Text style={styles.title}>Welcome</Text>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>Username</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Masukan username anda"
-              placeholderTextColor="grey"
-            />
-          </View>
-
-          <View style={styles.inputContainer}>
-            <Text style={styles.label}>Password</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="Masukan password anda"
-              placeholderTextColor="gray"
-              secureTextEntry={true}
-            />
-          </View>
-
-          <TouchableOpacity style={styles.button} activeOpacity={0.7}>
-            <Text style={styles.buttonText}>Sign In</Text>
-          </TouchableOpacity>
+          <Title title="Welcome" />
+          <Input label="Username" placeholder="Masukan Username anda" />
+          <Input label="Pasword" placeholder="Masukan Pasword anda" />
+          <Button buttonText="Login" color="blue" />
+          <Button buttonText="Google" color="red" />
+          <Button buttonText="IG" color="black" />
         </View>
       </ScrollView>
     </>
@@ -60,44 +44,7 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 4},
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: 'green',
-    textAlign: 'center',
-    marginBottom: 20,
-    alignSelf: 'flex-start',
-  },
   inputContainer: {
     marginBottom: 15,
-  },
-  label: {
-    fontSize: 16,
-    fontWeight: 'bold',
-    color: 'black',
-    marginBottom: 5,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: 'green',
-    padding: 10,
-    fontSize: 16,
-    borderRadius: 8,
-    backgroundColor: '#fff',
-  },
-  button: {
-    backgroundColor: 'green', // Warna Instagram
-    padding: 15,
-    borderRadius: 10,
-    alignItems: 'center',
-    marginTop: 20,
-    shadowOpacity: 0.2,
-    shadowRadius: 6,
-    elevation: 3,
-  },
-  buttonText: {
-    color: 'black',
-    fontSize: 18,
-    fontWeight: 'bold',
   },
 });
