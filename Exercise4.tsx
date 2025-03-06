@@ -73,14 +73,4 @@ const styles = StyleSheet.create({
     height: 180,
     resizeMode: 'contain',
   },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  subText: {
-    fontSize: 16,
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
 });
