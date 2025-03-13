@@ -4,11 +4,10 @@ import React from 'react';
 const Input = ({label, placeholder, onChangeText, ...rest}) => {
   return (
     <View>
-      <Text style={styles.label}>{label}</Text>
+      <Text style={styles.username}>{label}</Text>
       <TextInput
-        style={styles.input}
+        style={styles.inputName}
         placeholder={placeholder}
-        placeholderTextColor="grey"
         onChangeText={onChangeText}
         {...rest}
       />
@@ -19,18 +18,20 @@ const Input = ({label, placeholder, onChangeText, ...rest}) => {
 export default Input;
 
 const styles = StyleSheet.create({
-  label: {
-    fontSize: 16,
+  username: {
+    fontSize: 17,
+    marginLeft: 24,
+    color: 'yellow',
     fontWeight: 'bold',
-    color: 'black',
-    marginBottom: 5,
   },
-  input: {
+  inputName: {
     borderWidth: 1,
-    borderColor: 'green',
-    padding: 10,
-    fontSize: 16,
-    borderRadius: 8,
-    backgroundColor: '#fff',
+    padding: 6,
+    borderRadius: 6,
+    borderColor: 'grey',
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 10,
+    marginBottom: 30,
   },
 });

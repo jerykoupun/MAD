@@ -1,23 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text} from 'react-native';
 
-const Title = () => {
-  return (
-    <View>
-      <Text style={styles.title}>Welcome</Text>
-    </View>
-  );
+const Title = ({label}) => {
+  return <Text style={styles.title}>{label}</Text>;
 };
 
 export default Title;
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 24,
     fontWeight: 'bold',
-    color: 'green',
-    textAlign: 'center',
-    marginBottom: 20,
-    alignSelf: 'flex-start',
+    fontSize: 30,
+    color: 'yellow',
+    marginTop: 7,
+    marginBottom: 30,
+    marginLeft: 16,
   },
 });
