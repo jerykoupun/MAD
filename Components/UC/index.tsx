@@ -1,11 +1,11 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
+import {View, Text, Image, StyleSheet} from 'react-native';
 
-const UC = ({user}) => {
+const UserCard = ({user}) => {
   return (
     <View style={styles.card}>
       <Image source={{uri: user.avatar}} style={styles.avatar} />
-      <View style={styles.info}>
+      <View style={styles.userInfo}>
         <Text style={styles.name}>
           <Text style={styles.bold}>{user.last_name}</Text> {user.first_name}
         </Text>
@@ -15,29 +15,26 @@ const UC = ({user}) => {
   );
 };
 
-export default UC;
+export default UserCard;
 
 const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
     padding: 15,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 3,
+    backgroundColor: '#fff',
+    borderWidth: 0.4,
+    borderRadius: 20,
+    marginBottom: 25,
   },
   avatar: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 100,
+    height: 100,
+    borderRadius: 10,
+    marginRight: 15,
   },
-  info: {
-    marginLeft: 15,
+  userInfo: {
+    flex: 1,
   },
   name: {
     fontSize: 16,

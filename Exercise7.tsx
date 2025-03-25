@@ -1,20 +1,20 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import UserCard from './Components/UC/index';
 
-const Restapi = () => {
+const UserList = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('https://reqres.in/api/users?per_page=12')
-      .then(response => setUsers(response.data.data));
+    fetch('https://reqres.in/api/users?per_page=12')
+      .then(response => response.json())
+      .then(data => setUsers(data.data))
+      .catch(error => console.error(error));
   }, []);
 
   return (
     <View style={styles.container}>
-      a<Text style={styles.text}>User List</Text>
+      <Text style={styles.title}>User List</Text>
       <ScrollView>
         {users.map(user => (
           <UserCard key={user.id} user={user} />
@@ -24,19 +24,18 @@ const Restapi = () => {
   );
 };
 
-export default Restapi;
+export default UserList;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 20,
     backgroundColor: 'black',
-    paddingTop: 40,
   },
-  text: {
+  title: {
+    color: 'white',
     fontSize: 25,
     fontWeight: 'bold',
-    marginBottom: 20,
-    textAlign: 'center',
-    color: 'white',
+    marginBottom: 40,
   },
 });
