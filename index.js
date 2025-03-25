@@ -7,5 +7,6 @@ import App from './App';
 import Exercise6 from './Exercise6';
 import {name as appName} from './app.json';
 import Restapi from './Restapi';
+import Exercise7 from './Exercise7';
 
-AppRegistry.registerComponent(appName, () => Restapi);
+AppRegistry.registerComponent(appName, () => Exercise7);
