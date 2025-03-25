@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View} from 'react-native';
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
 const Restapi = () => {
@@ -21,7 +21,7 @@ const Restapi = () => {
   );
 };
 
-export default RestAPI;
+export default Restapi;
 
 const styles = StyleSheet.create({
   text: {
