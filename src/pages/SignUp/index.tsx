@@ -5,7 +5,7 @@ import Button from '../../components/atom/Button';
 import Gap from '../../components/atom/Gap';
 import Header from '../../components/molecules/Header';
 
-const Signup = () => {
+const Signup = ({navigation}) => {
   return (
     <View style={styles.pageContainer}>
       <Header title="Sign Up" />
@@ -27,7 +27,10 @@ const Signup = () => {
         <Gap height={16} />
         <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button label="Continue" />
+        <Button
+          label="Continue"
+          onPress={() => navigation.navigate('SignIn')}
+        />
         <Gap height={12} />
       </View>
     </View>
